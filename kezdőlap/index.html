@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8d4152931c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Pupák Kutyapanzió</title>
+</head>
+<body>
+   <div class="nav-container">
+        <div class="navbar">
+            <a href="index.html" id="navbar-logo">PUPÁK&nbsp;KUTYAPANZIÓ</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <Li><a href="index.html" class="nav-links">Home</a></Li>
+                <Li><a href="services.html" class="nav-links">Szolgáltatások</a></Li>
+                <Li><a href="aboutUs.html" class="nav-links">Rólunk</a></Li>
+                <Li><a href="gallery.html" class="nav-links">Galéria</a></Li>
+                <Li><a href="#" id="bejelentkezesBtn" class="nav-links nav-links-btn">Bejelentkezés</a></Li>
+            </ul>
+        </div>
+   </div>
+
+   <div class="main">
+    <div class="main-container">
+        <div class="main-content">
+            <h1>Üdvözöllek a Pupák Panzió köreiben!</h1>
+            <p>Biztosra veheted, hogy ez lesz kutyusod kedvenc elfoglaltsága, ha éppen az időd úgy kívánja, hogy nem tudsz rá vigyázni, de egyedül sem szívesen hagynád:). </p>
+            <button class="main-btn" id="get-started"><a href="#">Kezdjünk bele!</a></button>
+        </div>
+        <div class="main-img-container">
+            <img src="pic1.svg" alt="" id="main-img">
+        </div>
+    </div>
+   </div>
+
+<!-- Sign up modal -->
+    <div class="form-box" id="formBox">   
+        <span class="close-btn">&times;</span>
+        <h1 id="title">Regisztráció</h1>
+        <form>
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Név">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Jelszó">
+                </div>
+                <p>Elfelejtetted a jelszavad? <a href="#">Kattints ide!</a></p>
+            </div>
+            <div class="btn-field">
+                <button type="button" id="signupBtn">Regisztráció</button>
+                <button type="button" id="signinBtn" class="disable">Bejelentkezés</button>
+            </div>
+        </form>
+    </div>
+   
+    
+
+<!-- End of Sing Up section -->
+
+   <script src="app.js"></script>
+</body>
+</html>

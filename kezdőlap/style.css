@@ -1,0 +1,309 @@
+
+@import url('content.css');
+
+:root {
+    --darkgray: #212329;
+    --brightred: #f9423d;
+    --white: #fff;
+    --lightred: #f9433dcc;
+    --tojassarga: #f9e8bb;
+    --tojassarga2: #acac94;
+    --barna: #886c50;
+    --vilagoskek: #6c6a84;
+    --rozsaszin: #fb6b83;
+    --sotetkek: #3f3d56;
+    --vilagosszurke: #cbcbcb;
+    --tojassarga3: #c4ba9f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.nav-container {
+    width: 100%;
+    background-color: var(--tojassarga);
+}
+/* Sign Up ablak */
+.form-box {
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 49.9%;
+    transform: translate(-50%, -50%);
+    background: var(--tojassarga3);
+    padding: 50px 60px 70px;
+    text-align: center;
+    z-index: 999;
+    border-radius: 20px;
+    margin-top: 0.1rem;
+    display: none;
+}
+
+
+.form-box h1 {
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: var(--sotetkek);
+    position: relative;
+}
+
+.form-box h1::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 20px;
+    background: var(--sotetkek);
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+.input-field {
+    background: var(--vilagoskek);
+    margin: 15px 0;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-heigth 0.5s;
+    overflow: hidden;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+    cursor: pointer;
+}
+
+.input-field i {
+    margin-left: 15px;
+    color: var(--white);
+}
+
+.input-field ::placeholder {
+    color: var(--white);
+}
+
+form p {
+    text-align: center;
+    font-size: 13px;
+}
+
+form p a {
+    text-decoration: none;
+    color: var(--rozsaszin);
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-field button {
+    flex-basis: 48%;
+    background: var(--vilagoskek);
+    color: var(--white);
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.input-group {
+    height: 280px;
+    color: var(--sotetkek);
+}
+
+
+.btn-field button.disable {
+    background: var(--vilagosszurke);
+    color: var(--white);
+}
+
+.close-btn {
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    font-size: 1.5rem;
+    z-index: 1;
+    color: var(--sotetkek);
+    cursor: pointer;
+}
+
+
+
+/* fejléc */
+.navbar {
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+#navbar-logo {
+    color: var(--sotetkek);
+    justify-self: start;
+    margin-left: 0.5rem;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+#navbar-logo {
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    list-style: none;
+    text-align: center;
+    width: 70%;
+    justify-self: end;
+    column-gap: 3px;
+    width: 95%;
+}
+
+.nav-links {
+    color: var(--sotetkek);
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    color: var(--white);
+    transition: all 0.2s ease-out;
+}
+
+.nav-links-btn {
+    background-color: var(--sotetkek);
+    color: var(--tojassarga);
+    padding: 6px 16px;
+    border-radius: 18px;
+}
+
+.nav-links-btn:hover {
+    background-color: var(--tojassarga2);
+    color: var(--sotetkek);
+    padding: 8px 18px;
+    border-radius: 18px;
+    border: solid 1px var(--tojassarga2);
+    transition: all 0.3s ease-out;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: var(--sotetkek);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        position: relative;
+    }
+
+    .nav-menu {
+        display: grid;
+        grid-template-columns: auto;
+        background: var(--barna);
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    #navbar-logo {
+        margin-left: 20px;
+    }
+
+    .nav-menu.active {
+        background: var(--tojassarga);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 10;    
+        
+    }
+
+
+    .nav-links {
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: var(--vilagoskek);
+        color: var(--white);
+        transition: all 0.4s ease-out;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .nav-links-btn {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: var(--rozsaszin);
+        color: var(--white);
+        transition: all 0.4s ease-out;
+    }
+
+    .nav-links-btn:hover {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: var(--sotetkek);
+        color: var(--white);
+        transition: all 0.4s ease-out;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+}
